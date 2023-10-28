@@ -28,7 +28,7 @@ ORDER BY City;
 
 ---------------------------------------------------------------------------------------------
 
-1. c) THe query modified to only return customers in Canada or the United States whose
+1. c) The query modified to only return customers in Canada or the United States whose
 last name starts with the letter M.
 
 SELECT 
@@ -91,7 +91,7 @@ JOIN Employee m ON e.ReportsTo = m.EmployeeId;
 
 ----------------------------------------------------------------------------------------------
 
-2. d) When you review the list you notice that the General Manager, Andrew Adams, is not included on the list.  Modify your 
+2. d) After reviewing the list I notice that the General Manager, Andrew Adams, is not included on the list.  I modify the 
 query from 2c: to include Andrew so the record looks as follows: “Andrew Adams reports to himself”
 
 SELECT 
@@ -103,7 +103,7 @@ WHERE e.EmployeeId = 1;
 
 ----------------------------------------------------------------------------------------------
 
-3. a) Create a report that that Joins the Albums to Tracks table and returns
+3. a) A report that Joins the Albums to Tracks table and returns
  the title of each album and the number of tracks it contains. 
 
 SELECT 
@@ -115,7 +115,7 @@ GROUP BY Album.AlbumId;
 
 -------------------------------------------------------------------------------------------
 
-3. b) Modify your query from 3a so that the report only shows albums that 
+3. b) The above query modified so that the report only shows albums that 
 have more than ten tracks.
 
 SELECT 
