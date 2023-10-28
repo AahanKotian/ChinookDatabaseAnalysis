@@ -1,4 +1,4 @@
-1. a) Write a Query that returns the following data from the Customers table:
+1. a) A query that returns the following data from the Customers table:
     a. FirstName and LastName concatenated into a single column,
     b. The Company Name
     c. Their city
@@ -13,7 +13,9 @@ SELECT
 FROM Customer
 ORDER BY City;
 
-1. b) Modify your query to only return customers from Canada or the United States
+---------------------------------------------------------------------------------------------------
+
+1. b) The above query modified to only return customers from Canada or the United States
 
 SELECT 
     FirstName || ' ' || LastName AS FullName,
@@ -24,7 +26,9 @@ FROM Customer
 WHERE Country IN ('Canada', 'USA')
 ORDER BY City;
 
-1. c) Modify your query to only return customers in Canada or the United States whose
+---------------------------------------------------------------------------------------------
+
+1. c) THe query modified to only return customers in Canada or the United States whose
 last name starts with the letter M.
 
 SELECT 
@@ -37,7 +41,9 @@ WHERE Country IN ('Canada', 'USA')
     AND LastName LIKE 'M%'
 ORDER BY City;
 
-2. a) Write a query white returns the following information from the Artist, Albums 
+---------------------------------------------------------------------------------------------
+
+2. a) A query that returns the following information from the Artist, Albums 
 and Tracks tables:
     a. Artist Name
     b. Album Title
@@ -53,7 +59,9 @@ JOIN Album ON Artist.ArtistId = Album.ArtistId
 JOIN Track ON Album.AlbumId = Track.AlbumId
 ORDER BY ArtistName;
 
-2. b) Modify the previous query so it only returns tracks that have the word
+-------------------------------------------------------------------------------------------
+
+2. b) The previous query modified so it only returns tracks that have the word
 “dancing” somewhere in the track name.
 
 SELECT 
@@ -66,7 +74,9 @@ JOIN Track ON Album.AlbumId = Track.AlbumId
 WHERE Track.Name LIKE '%dancing%'
 ORDER BY ArtistName;
 
-2. c) You have been asked to create a org chart for the company. Create a query 
+-----------------------------------------------------------------------------------------------
+
+2. c) This is a sample org chart for the company. A query 
 that returns two columns one with the employee’s first and last name and the second 
 with their managers first and last name.
 Example:
@@ -79,6 +89,8 @@ SELECT
 FROM Employee e
 JOIN Employee m ON e.ReportsTo = m.EmployeeId;
 
+----------------------------------------------------------------------------------------------
+
 2. d) When you review the list you notice that the General Manager, Andrew Adams, is not included on the list.  Modify your 
 query from 2c: to include Andrew so the record looks as follows: “Andrew Adams reports to himself”
 
@@ -89,6 +101,8 @@ FROM Employee e
 LEFT JOIN Employee m ON e.ReportsTo = m.EmployeeId
 WHERE e.EmployeeId = 1;
 
+----------------------------------------------------------------------------------------------
+
 3. a) Create a report that that Joins the Albums to Tracks table and returns
  the title of each album and the number of tracks it contains. 
 
@@ -98,6 +112,8 @@ SELECT
 FROM Album
 JOIN Track ON Album.AlbumId = Track.AlbumId
 GROUP BY Album.AlbumId;
+
+-------------------------------------------------------------------------------------------
 
 3. b) Modify your query from 3a so that the report only shows albums that 
 have more than ten tracks.
